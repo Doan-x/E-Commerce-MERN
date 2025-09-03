@@ -11,6 +11,8 @@ router.get('/', controllers.getProducts)
 router.put('/:pid', [verifyAccessToken, isAdmin], controllers.updateProduct)
 router.delete('/:pid', [verifyAccessToken, isAdmin], controllers.deleteProduct)
 router.get('/:pid', controllers.getProduct)
+router.put('/:pid',[verifyAccessToken], controllers.ratings)
+
 
 
 module.exports = router
